@@ -33,14 +33,53 @@
   transition: all 0.2s ease;
 }
 
-.newsGrid {
+.newsLayout {
   display: grid;
-  align-items: stretch;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: 350px 1fr;
   gap: 2rem;
+
+  flex: 1;        /* 👈 занимает всё оставшееся */
+  min-height: 0;  /* 👈 ВАЖНО (fix overflow) */
 }
 
+.newsSidebar {
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  padding-right: 0.5rem;
+}
+
+.newsViewer {
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 16px;
+  padding: 2rem;
+
+  overflow-y: auto;
+
+  border: 1px solid rgba(125, 211, 252, 0.1);
+}
+
+.newsSidebar,
+.newsViewer {
+  min-height: 0; /* 👈 иначе scroll ломается */
+  overflow-y: auto;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black 80%,
+    transparent 100%
+  );
+}
+
+
+
 .newsPage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   max-width: 70%;   /* или 1200–1500 под вкус */
   margin: 0 auto;      /* центрирует */
   padding: 5rem 2rem;  /* воздух по бокам */
@@ -109,7 +148,7 @@
   font-size: 0.85rem;
   color: rgba(148, 163, 184, 0.7);
   position: relative;
-  padding-bottom: 0.5rem;
+  padding-bottom: 2rem;
 }
 
 /* .modalDate::after {
@@ -129,7 +168,7 @@
   color: rgba(226, 232, 240, 0.9);
   line-height: 1.7;
 
-  font-size: 0.95rem;
+  font-size: 1rem;
 
   max-width: 65ch;
 
@@ -142,9 +181,9 @@
   border-radius: 14px;
   overflow: hidden;
 
-  margin-bottom: 0.5rem;
-  box-shadow:
-    0 0 20px rgba(56, 189, 248, 0.2);
+  margin-bottom: 2rem;
+  
+ 
 }
 
 .modal button {

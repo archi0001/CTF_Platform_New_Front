@@ -8,6 +8,9 @@ export interface NewsCardProps {
   date: string;
   type: "past" | "upcoming";
   compact?: boolean;
+  
+  isActive?: boolean;
+  onClick?: () => void;
 }
 
 export default function NewsCard({
@@ -18,6 +21,8 @@ export default function NewsCard({
   date,
   type,
   compact = false,
+  isActive,
+  onClick,
   onNewsClick,
 }: NewsCardProps & { onNewsClick?: (id: number) => void }) {
   const formattedDate = new Date(date).toLocaleDateString("ru-RU");
@@ -28,14 +33,19 @@ export default function NewsCard({
 
   if (compact) {
     return (
-      <div className={styles.newsCardCompact} onClick={handleClick}>
+      <div 
+        className={`${styles.newsCardCompact} ${
+          isActive ? styles.newsCardActive : ""
+        }`}
+        onClick={onClick}
+      >
         <div className={styles.newsCardCompactContent}>
           <h3 className={styles.newsCardCompactTitle}>{title}</h3>
           <p className={styles.newsCardCompactDate}>{formattedDate}</p>
         </div>
-        <span className={`${styles.newsType} ${styles[type]}`}>
+        {/* <span className={`${styles.newsType} ${styles[type]}`}>
           {type === "upcoming" ? "Предстоящее" : "Прошедшее"}
-        </span>
+        </span> */}
       </div>
     );
   }

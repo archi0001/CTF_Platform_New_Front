@@ -38,7 +38,7 @@ export default function News() {
       id: 1,
       data: {
         title: "Aaaaaaaaarch!!!!!!!!!! lllinux",
-        text: "A simple, lightweight distribution. You've reached the website for Arch Linux, a lightweight and flexible Linux® distribution that tries to Keep It Simple. Currently we have official packages optimized for the x86-64 architecture. We complement our official package sets with a community-operated package repository that grows in size and quality each and every day. Our strong community is diverse and helpful, and we pride ourselves on the range of skillsets and uses for Arch that stem from it. Please check out our forums and mailing lists to get your feet wet. Also glance through our wiki if you want to learn more about Arch.",
+        text: "A simple, lightweight distribution. You've reached the website for Arch Linux, a lightweight and flexible Linux® distribution that tries to Keep It Simple. Currently we have official packages optimized for the x86-64 architecture. We complement our official package sets with a community-operated package repository that grows in size and quality each and every day. Our strong community is diverse and helpful, and we pride ourselves on the range of skillsets and uses for Arch that stem from it. Please check out our forums and mailing lists to get your feet wet. Also glance through our wiki if you want to learn more about Arch. A simple, lightweight distribution. You've reached the website for Arch Linux, a lightweight and flexible Linux® distribution that tries to Keep It Simple. Currently we have official packages optimized for the x86-64 architecture. We complement our official package sets with a community-operated package repository that grows in size and quality each and every day. Our strong community is diverse and helpful, and we pride ourselves on the range of skillsets and uses for Arch that stem from it. Please check out our forums and mailing lists to get your feet wet. Also glance through our wiki if you want to learn more about Arch. A simple, lightweight distribution. You've reached the website for Arch Linux, a lightweight and flexible Linux® distribution that tries to Keep It Simple. Currently we have official packages optimized for the x86-64 architecture. We complement our official package sets with a community-operated package repository that grows in size and quality each and every day. Our strong community is diverse and helpful, and we pride ourselves on the range of skillsets and uses for Arch that stem from it. Please check out our forums and mailing lists to get your feet wet. Also glance through our wiki if you want to learn more about Arch. A simple, lightweight distribution. You've reached the website for Arch Linux, a lightweight and flexible Linux® distribution that tries to Keep It Simple. Currently we have official packages optimized for the x86-64 architecture. We complement our official package sets with a community-operated package repository that grows in size and quality each and every day. Our strong community is diverse and helpful, and we pride ourselves on the range of skillsets and uses for Arch that stem from it. Please check out our forums and mailing lists to get your feet wet. Also glance through our wiki if you want to learn more about Arch.",
         created_at: "2026-03-20",
         status: "upcoming",
         image: "https://i.redd.it/3fkqlzr9vhq11.png",
@@ -118,6 +118,42 @@ export default function News() {
         status: "upcoming",
       },
     },
+    {
+      id: 10,
+      data: {
+        title: "Итоги CyberBattle 2026",
+        text: "Команда pwned заняла первое место 🏆 ",
+        created_at: "2026-03-10",
+        status: "past",
+      },
+    },
+    {
+      id: 11,
+      data: {
+        title: "Новый CTF от Яндекса",
+        text: "Будет много задач по reverse и web 👀",
+        created_at: "2026-03-18",
+        status: "upcoming",
+      },
+    },
+    {
+      id: 12,
+      data: {
+        title: "Итоги CyberBattle 2026",
+        text: "Команда pwned заняла первое место 🏆 ",
+        created_at: "2026-03-10",
+        status: "past",
+      },
+    },
+    {
+      id: 13,
+      data: {
+        title: "Новый CTF от Яндекса",
+        text: "Будет много задач по reverse и web 👀",
+        created_at: "2026-03-18",
+        status: "upcoming",
+      },
+    },
   ];
 
   useEffect(() => {
@@ -149,19 +185,46 @@ export default function News() {
       {loading ? (
         <div className={styles.loading}>Загрузка новостей...</div>
       ) : (
-        <div className={styles.newsGrid}>
-          {news.map((item) => (
-            <NewsCard
-              key={item.id}
-              id={item.id}
-              title={item.data.title}
-              content={item.data.text}
-              image={""}
-              date={item.data.created_at}
-              type={item.data.status}
-              onNewsClick={() => setSelectedNews(item)} // 👈 ВОТ СЮДА
-            />
-          ))}
+        <div className={styles.newsLayout}>
+  
+          {/* LEFT */}
+          <div className={styles.newsSidebar}>
+            {news.map((item) => (
+              <NewsCard
+                key={item.id}
+                id={item.id}
+                title={item.data.title}
+                content={item.data.text}
+                date={item.data.created_at}
+                type={item.data.status}
+                compact
+
+                isActive={selectedNews?.id === item.id}
+                onClick={() => setSelectedNews(item)}
+              />
+            ))}
+          </div>
+
+          {/* RIGHT */}
+          <div className={styles.newsViewer}>
+            {selectedNews ? (
+              <>
+                <h2>{selectedNews.data.title}</h2>
+                <p className={styles.modalDate}>{selectedNews.data.created_at}</p>
+
+                {selectedNews.data.image && (
+                  <div className={styles.modalImage}>
+                    <img src={selectedNews.data.image} alt="" />
+                  </div>
+                )}
+
+                <p className={styles.modalText}>{selectedNews.data.text}</p>
+              </>
+            ) : (
+              <p>Выберите новость 👈</p>
+            )}
+          </div>
+
         </div>
       )}
 
@@ -171,7 +234,7 @@ export default function News() {
         </div>
       )}
 
-      {selectedNews && (
+      {/* {selectedNews && (
         <div
           className={`${styles.modalOverlay} ${isClosing ? styles.modalOverlayClosing : ""}`}
           onClick={handleClose}
@@ -205,7 +268,7 @@ export default function News() {
             </button>
           </div>
         </div>
-      )}
+      )} */}
 
       
     </div>

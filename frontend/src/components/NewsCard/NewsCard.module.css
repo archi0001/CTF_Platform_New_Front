@@ -79,13 +79,39 @@
   text-overflow: ellipsis;
 }
 
+
 .newsCardCompact {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+
+  background: rgba(15, 23, 42, 0.4);
+
+  border: 1px solid rgba(255, 255, 255, 0.04); /* 👈 ВСЕГДА есть */
+
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.newsCardCompact:hover {
+  background: rgba(56, 189, 248, 0.08);
+}
+
+.newsCardActive {
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(125, 211, 252, 0.4);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.2);
+  position: relative;
+}
+
+.newsCardActive::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  border-radius: 3px;
+  background: #7dd3fc;
 }
 
 .newsCardCompactContent {
