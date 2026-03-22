@@ -13,36 +13,29 @@ body {
   pointer-events: none;
 
   background:
-    radial-gradient(circle at 20% 20%, #0a1a2f, #020617 70%),
-    linear-gradient(180deg, #020617 0%, #000000 100%);
-
-  background-attachment: fixed;
+    radial-gradient(circle at 20% 20%, #0f172a, #020617 70%),
+    linear-gradient(180deg, #020617 0%, #020617 100%);
 }
 
 .background::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-
   background:
     radial-gradient(
       600px 600px at 80% 10%,
-      rgba(56, 189, 248, 0.18),
+      rgba(56, 189, 248, 0.10),
       transparent 70%
     ),
     radial-gradient(
       800px 800px at 30% 40%,
-      rgba(37, 99, 235, 0.12),
+      rgba(125, 211, 252, 0.08),
       transparent 75%
     ),
     radial-gradient(
       400px 400px at 70% 70%,
-      rgba(14, 165, 233, 0.1),
+      rgba(56, 189, 248, 0.06),
       transparent 70%
     );
 
-  filter: blur(120px);
+  filter: blur(140px);
 }
 
 .background::after {
@@ -85,7 +78,11 @@ main {
   --color-black-2: #020617;
   --color-black-3: #020617;
 
-  --color-blue: #38bdf8;
+  --color-blue: #7dd3fc;     /* основной */
+  --color-blue-soft: #bae6fd; /* светлый акцент */
+
+  --color-white-1: #e2e8f0;
+  --color-grey-1: #94a3b8;
   --color-purple: #2563eb;
 
   --color-white-1: #e6f1ff;
