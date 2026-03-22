@@ -1,0 +1,7 @@
+.DS_Store
+#.env - убрать на проде
+/node_modules/
+
+# React Router
+/.react-router/
+/build/

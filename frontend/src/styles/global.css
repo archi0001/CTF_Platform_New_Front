@@ -1,0 +1,114 @@
+html,
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: var(--font-weight-medium);
+  font-size: 16px;
+  min-height: 100%;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background:
+    radial-gradient(circle at 20% 20%, #0a1a2f, #020617 70%),
+    linear-gradient(180deg, #020617 0%, #000000 100%);
+
+  background-attachment: fixed;
+}
+
+.background::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      600px 600px at 80% 10%,
+      rgba(56, 189, 248, 0.18),
+      transparent 70%
+    ),
+    radial-gradient(
+      800px 800px at 30% 40%,
+      rgba(37, 99, 235, 0.12),
+      transparent 75%
+    ),
+    radial-gradient(
+      400px 400px at 70% 70%,
+      rgba(14, 165, 233, 0.1),
+      transparent 70%
+    );
+
+  filter: blur(120px);
+}
+
+.background::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    repeating-linear-gradient(
+      to right,
+      rgba(56, 189, 248, 0.08) 0 1px,
+      transparent 1px 120px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(56, 189, 248, 0.08) 0 1px,
+      transparent 1px 120px
+    );
+
+  opacity: 0.6;
+
+  
+
+  mask-image: radial-gradient(ellipse at center, black 55%, transparent 85%);
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    black 55%,
+    transparent 85%
+  );
+}
+
+main {
+  position: relative;
+  z-index: 2;
+}
+
+:root {
+  --color-black-1: #020617;
+  --color-black-2: #020617;
+  --color-black-3: #020617;
+
+  --color-blue: #38bdf8;
+  --color-purple: #2563eb;
+
+  --color-white-1: #e6f1ff;
+  --color-grey-1: #94a3b8;
+
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
+
+  --font-size-xs: 12px;
+  --font-size-sm-1: 14px;
+  --font-size-sm-2: 15px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 32px;
+  --font-size-4xl: 36px;
+  --font-size-5xl: 40px;
+}

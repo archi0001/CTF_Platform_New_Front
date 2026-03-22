@@ -1,0 +1,123 @@
+.form {
+  width: 664px;
+  height: 900px;
+  background-color: var(--color-black-1);
+  border-radius: 35px;
+  padding: 65px 42px 60px 60px;
+}
+
+.header {
+  text-align: center;
+}
+
+.headerLabel {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-5xl);
+}
+
+.headerDescription {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  opacity: 0.5;
+}
+
+.formInputSingle,
+.formInputDouble {
+  padding: 12px;
+  border: 1px solid var(--color-black-2);
+  border-radius: 6px;
+  background: var(--color-black-1);
+  color: white;
+  height: 45px;
+}
+
+.formInputDouble::placeholder,
+.formInputSingle::placeholder {
+  color: #666666;
+  opacity: 0.5;
+}
+
+.doubleForm {
+  display: flex;
+  gap: 20px;
+}
+
+.doubleForm .field {
+  flex: 1;
+}
+
+.formLabel {
+  display: flex;
+  gap: 4px;
+}
+
+.formLabelText {
+  opacity: 0.5;
+  margin-left: 6px;
+  font-weight: var(--font-weight-medium);
+}
+
+.registrationFields {
+  display: flex;
+  margin-top: 38px;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+}
+
+.submitButton {
+  display: block;
+  margin: 10px auto 0;
+  width: 356px;
+  height: 45px;
+  border-radius: 10px;
+  background: linear-gradient(91.04deg, #7575c4 11.29%, #484891 97.5%);
+  border: none;
+  cursor: pointer;
+  font-weight: var(--font-weight-bold);
+}
+
+.footer {
+  margin-top: 29px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+  text-align: center;
+}
+
+.footer p {
+  width: 368px;
+  height: 70px;
+  font-size: var(--font-size-sm-1);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-grey-2);
+}
+
+.footer span {
+  font-size: var(--font-size-sm-1);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-blue);
+  cursor: pointer;
+}
+
+.loggedLabel {
+  margin-top: 47px;
+  text-align: center;
+  font-size: var(--font-size-sm-1);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-grey-2);
+}
+
+.loggedLabel span {
+  font-size: var(--font-size-sm-1);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-purple);
+  cursor: pointer;
+}

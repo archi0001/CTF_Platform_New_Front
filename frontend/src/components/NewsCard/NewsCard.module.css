@@ -1,0 +1,120 @@
+.newsCard {
+  position: relative;
+  background: rgba(2, 6, 23, 0.65);
+  backdrop-filter: blur(12px);
+
+  border-radius: 20px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  box-shadow:
+    0 0 20px rgba(56, 189, 248, 0.12),  
+    0 0 40px rgba(56, 189, 248, 0.08),   
+    inset 0 0 12px rgba(56, 189, 248, 0.06);
+
+  transition: all 0.3s ease;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.newsCard:hover {
+  transform: translateY(-4px);
+
+
+  border: 1px solid rgba(56, 189, 248, 0.45);
+
+  box-shadow:
+    0 0 30px rgba(56, 189, 248, 0.35),
+    0 0 60px rgba(56, 189, 248, 0.15),
+    inset 0 0 18px rgba(56, 189, 248, 0.1);
+}
+
+.newsCard:hover::before {
+  opacity: 1;
+}
+
+.newsCardImage {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.newsCardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.newsCardContent {
+  padding: 1.5rem;
+}
+
+.newsCardHeader {
+  margin-bottom: 0.5rem;
+}
+
+.newsCardTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-bottom: 0.5rem;
+}
+
+.newsCardDate {
+  font-size: 0.8rem;
+  color: rgba(148, 163, 184, 0.7);
+  margin-bottom: 0.75rem;
+}
+
+.newsCardText {
+  color: rgba(226, 232, 240, 0.9);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* сколько строк показывать */
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.newsCardCompact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.newsCardCompactContent {
+  flex: 1;
+}
+
+.newsCardCompactTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 0.25rem 0;
+}
+
+.newsCardCompactDate {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.newsType {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.newsType.upcoming {
+  background: #dbeafe;
+}
+
+.newsType.past {
+  background: #f3f4f6;
+}

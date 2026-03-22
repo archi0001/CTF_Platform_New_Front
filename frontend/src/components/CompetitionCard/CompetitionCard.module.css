@@ -1,0 +1,154 @@
+.competitionCard {
+  background-color: var(--color-black-1);
+  border-radius: 8px;
+  width: 554px;
+  min-height: 271px;
+  padding: 19px 15px 0 38px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 341px;
+  height: 67px;
+}
+
+.titleLabel {
+  font-weight: var(--font-weight-bold);
+}
+
+.titleDescription {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-grey-1);
+}
+
+.registerLink,
+.completed {
+  background: var(--color-purple);
+}
+
+.participateLink {
+  background: var(--color-black-3);
+}
+
+.upcoming {
+  background-color: var(--color-orange);
+}
+
+.active {
+  background-color: var(--color-green);
+}
+
+.status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95px;
+  height: 25px;
+  border-radius: 12px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+}
+
+.dates {
+  display: flex;
+  margin-top: 20px;
+  gap: 77px;
+}
+
+.dateItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.dateLabel {
+  font-size: var(--font-size-sm-1);
+  font-weight: var(--font-weight-bold);
+}
+
+.dateValue {
+  font-size: var(--font-size-xs);
+  color: var(--color-grey-1);
+}
+
+.actions {
+  margin-top: 51px;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.registerButton,
+.participateButton {
+  border: none;
+  border-radius: 5px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.registerButton {
+  width: 152px;
+  height: 25px;
+  background: var(--color-purple);
+}
+
+.participateButton {
+  width: 105px;
+  height: 25px;
+  background: var(--color-black-3);
+}
+
+.registerButtonActive {
+  background: var(--color-purple);
+  cursor: pointer;
+}
+
+.participateButtonActive {
+  background: var(--color-black-3);
+  cursor: pointer;
+}
+
+.nonactive {
+  background-color: transparent;
+  border: 1px var(--color-black-2) solid;
+  color: var(--color-black-2);
+  cursor: not-allowed;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-black-4);
+  width: calc(100% + 53px);
+  height: 32px;
+  margin-left: -38px;
+  margin-right: -15px;
+  margin-top: auto;
+  padding: 0 15px 0 10px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.participants {
+  display: flex;
+  gap: 6px;
+  color: var(--color-grey-1);
+  font-size: var(--font-size-xs);
+}
+
+.resultsLink {
+  color: var(--color-purple);
+
+  font-size: var(--font-size-xs);
+}

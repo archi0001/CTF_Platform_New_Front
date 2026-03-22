@@ -1,0 +1,9 @@
+fastapi>=0.120.1
+SQLAlchemy>=2.0.44
+uvicorn>=0.37.0
+psycopg>=3.2.12
+psycopg-binary>=3.2.12
+bcrypt==4.1.2
+Jinja2==3.1.4
+python-jose==3.5.0
+psycopg2-binary

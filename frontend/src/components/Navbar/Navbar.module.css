@@ -1,0 +1,110 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 50px;
+  margin: 10px 10px 0 10px;
+  background-color: var(--color-black-1);
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid rgba(56, 189, 248, 0.25);
+
+  box-shadow:
+    0 0 12px rgba(56, 189, 248, 0.15),
+    inset 0 0 8px rgba(56, 189, 248, 0.05);
+
+  transition: all 0.3s ease;
+}
+
+.navbar:hover {
+  border: 1px solid rgba(56, 189, 248, 0.5);
+
+  box-shadow:
+    0 0 25px rgba(56, 189, 248, 0.35),
+    inset 0 0 12px rgba(56, 189, 248, 0.08);
+}
+
+
+
+.navbarInner {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbarContainer {
+  display: flex;
+  gap: 24px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.navbarLink {
+  font-weight: var(--font-weight-medium);
+  color: inherit;
+}
+
+.navbarLogo {
+  font-family: "Gochi Hand", cursive;
+
+  color: #38bdf8;
+  text-shadow: 0 0 6px rgba(56, 189, 248, 0.6);
+
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-regular);
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  min-width: max-content;
+}
+
+.icon {
+  width: 10px;
+  height: 10px;
+}
+
+.activeTab {
+  color: #38bdf8;
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.8);
+  
+  font-weight: var(--font-weight-bold);
+}
+
+.activeTab svg {
+  fill:#38bdf8;
+}
+
+.nonActiveTab {
+  color: var(--color-grey-1);
+}
+
+.nonActiveTab svg {
+  fill: var(--color-grey-1);
+}
+
+@media (max-width: 900px) {
+  .navbarLink {
+    display: none;
+  }
+  .navbarContainer {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbarLink {
+    display: none;
+  }
+  .navbarContainer {
+    gap: 25px;
+  }
+}
