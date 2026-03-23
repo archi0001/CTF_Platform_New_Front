@@ -1,0 +1,163 @@
+.adminPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #38bdf8;
+
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+.header p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: rgba(226, 232, 240, 0.7);
+}
+
+/* ================= GRID ================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ================= CARD ================= */
+
+.card {
+  position: relative;
+
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(12px);
+
+  border-radius: 16px;
+  padding: 1.5rem;
+
+  border: 1px solid rgba(125, 211, 252, 0.12);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.4);
+
+  transition: all 0.25s ease;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* мягкое свечение при ховере */
+.card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(125, 211, 252, 0.25);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(56, 189, 248, 0.15);
+}
+
+/* ================= TEXT ================= */
+
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: rgba(148, 163, 184, 0.7);
+  line-height: 1.4;
+}
+
+/* ================= BUTTONS ================= */
+
+.primaryButton {
+  margin-top: auto;
+
+  padding: 0.55rem 1.1rem;
+  border-radius: 10px;
+
+  border: 1px solid rgba(56, 189, 248, 0.4);
+
+  background: linear-gradient(
+    90deg,
+    rgba(56, 189, 248, 0.2),
+    rgba(14, 165, 233, 0.15)
+  );
+
+  color: #38bdf8;
+  font-weight: 600;
+  font-size: 0.9rem;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  box-shadow:
+    inset 0 0 8px rgba(56, 189, 248, 0.08);
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 20px rgba(56, 189, 248, 0.6),
+    inset 0 0 10px rgba(56, 189, 248, 0.15);
+
+  border-color: rgba(56, 189, 248, 0.7);
+}
+
+.primaryButton:active {
+  transform: scale(0.97);
+}
+
+/* secondary */
+
+.secondaryButton {
+  margin-top: auto;
+
+  padding: 0.55rem 1.1rem;
+  border-radius: 10px;
+
+  border: 1px solid rgba(148, 163, 184, 0.3);
+
+  background: rgba(148, 163, 184, 0.08);
+
+  color: rgba(226, 232, 240, 0.9);
+  font-size: 0.9rem;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.secondaryButton:hover {
+  background: rgba(148, 163, 184, 0.15);
+
+  border-color: rgba(148, 163, 184, 0.5);
+}
+
+.secondaryButton:active {
+  transform: scale(0.97);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .adminPage {
+    padding: 4rem 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

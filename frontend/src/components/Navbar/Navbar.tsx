@@ -86,7 +86,7 @@ function Navbar() {
               onClick={() => setActiveTab("admin")}
             >
               <AdminIcon />
-              <span className={styles.navbarLink}>Панель админа</span>
+              <span className={styles.navbarLink}>Панель администратора</span>
             </Link>
           )}
 

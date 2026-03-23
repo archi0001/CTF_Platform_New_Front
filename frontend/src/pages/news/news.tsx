@@ -234,45 +234,7 @@ export default function News() {
         <div className={styles.emptyState}>
           <p>Новости не найдены</p>
         </div>
-      )}
-
-      {/* {selectedNews && (
-        <div
-          className={`${styles.modalOverlay} ${isClosing ? styles.modalOverlayClosing : ""}`}
-          onClick={handleClose}
-        >
-          <div
-            className={`${styles.modal} ${isClosing ? styles.modalClosing : ""}`}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className={styles.modalContent}>
-              <h2 className={styles.modalTitle}>
-                {selectedNews.data.title}
-              </h2>
-
-                {selectedNews.data.image && (
-                  <div className={styles.modalImage}>
-                    <img src={selectedNews.data.image} alt="" />
-                  </div>
-                )}
-
-              <p className={styles.modalDate}>
-                {selectedNews.data.created_at}
-              </p>
-
-              <div className={styles.modalText}>
-                {selectedNews.data.text}
-              </div>
-            </div>
-
-            <button onClick={() => setSelectedNews(null)}>
-              Закрыть
-            </button>
-          </div>
-        </div>
-      )} */}
-
-      
+      )} 
     </div>
   );
 }

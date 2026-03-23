@@ -5,16 +5,33 @@
 ## 📸 Скриншоты
 
 <div align="center">
-  <img src="Images/Screenshot_11-Mar_22-32-50_28026.png" alt="Главная страница" width="45%">
-  <img src="Images/Screenshot_11-Mar_22-33-16_23822.png" alt="Профиль пользователя" width="45%">
+  <img src="Images/news.png" alt="Главная страница / Новости" width="45%">
+  <img src="Images/challenges.png" alt="Соревнования" width="45%">
 </div>
 <div align="center">
-  <img src="Images/Screenshot_11-Mar_22-33-34_11446.png" alt="Новости" width="45%">
-  <img src="Images/Screenshot_11-Mar_22-33-43_6603.png" alt="Соревнования" width="45%">
+  <img src="Images/team.png" alt="Команда" width="45%">
+  <img src="Images/admin.png" alt="Панель администратора" width="45%">
 </div>
 <div align="center">
-  <img src="Images/Screenshot_11-Mar_22-33-51_8724.png" alt="Регистрация" width="60%">
+  <img src="Images/profile.png" alt="Профиль" width="60%">
 </div>
+
+
+## Изменения Archi
+Изменен дизайн фронта, бэк абсолютно не трогался. Не знаю даже, живой он вообще, или нет. На страничках, где требуется какая-либо инфа извне, запросы в апи комментировал и заменял на статические тестовые массивы данных. (Страницы news, competitions (useCompetitions.ts), profile). Если Амировский бэк был дописан и работал, то нужно просто раскомментировать эти части, убрать статику, и все должно заработать. Страницы team не существовало, для нее обращение к бэку прописать отдельно.
+
+На странице admin подвязать кнопки, пока пустые
+Так же подвязать кнопки на странице соревнований, чтобы пересылали на нужные разделы CTFd
+
+
+
+
+
+
+
+
+
+### Внизу не мое
 
 ## 📋 Содержание
 

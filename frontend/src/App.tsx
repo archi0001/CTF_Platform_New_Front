@@ -13,6 +13,9 @@ import Login from "./pages/login/login";
 import News from "./pages/news/news";
 import Competitions from "./pages/competitons/competitions";
 import Profile from "./pages/profile/profile";
+import Admin from "./pages/admin/admin";
+import Team from "./pages/team/team";
+
 
 export const store = new Store();
 export const Context = createContext({ store });
@@ -37,6 +40,8 @@ const AppContent = observer(() => {
           <Route path="/news" element={<News />} />
           <Route path="/competitions" element={<Competitions />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/team" element={<Team />} />
         </Route>
       </Routes>
     </>
