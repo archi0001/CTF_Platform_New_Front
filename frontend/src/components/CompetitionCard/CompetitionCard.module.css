@@ -1,12 +1,33 @@
 .competitionCard {
-  background-color: var(--color-black-1);
-  border-radius: 8px;
-  width: 554px;
-  min-height: 271px;
-  padding: 19px 15px 0 38px;
+  position: relative;
+
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(14px);
+
+  border-radius: 16px;
+  padding: 1.5rem;
+
+  border: 1px solid rgba(125, 211, 252, 0.12);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.4);
+
   display: flex;
   flex-direction: column;
-  position: relative;
+  gap: 1rem;
+
+  min-width: 500px;
+
+  transition: all 0.25s ease;
+}
+
+.competitionCard:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5);
+
+  border-color: rgba(125, 211, 252, 0.25);
 }
 
 .cardHeader {
@@ -17,23 +38,23 @@
 .title {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  width: 341px;
-  height: 67px;
+  gap: 0.5rem;
 }
 
 .titleLabel {
-  font-weight: var(--font-weight-bold);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #e2e8f0;
 }
 
 .titleDescription {
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-grey-1);
+  font-size: 0.85rem;
+  color: rgba(148, 163, 184, 0.7);
+
+  line-height: 1.4;
 }
 
-.registerLink,
-.completed {
+.registerLink {
   background: var(--color-purple);
 }
 
@@ -42,22 +63,31 @@
 }
 
 .upcoming {
-  background-color: var(--color-orange);
+  background: rgba(56, 189, 248, 0.12);
+  color: #ffffff;
 }
 
 .active {
-  background-color: var(--color-green);
+  background: rgba(255, 77, 0, 0.25);
+  color: #ffffff;
+}
+
+.completed {
+  background: rgba(0, 255, 60, 0.12);
+  color: #ffffff;
 }
 
 .status {
+  width: 7rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+
+  font-size: 0.75rem;
+  font-weight: 500;
+
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 95px;
-  height: 25px;
-  border-radius: 12px;
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
+  justify-content: center;
 }
 
 .dates {
@@ -90,10 +120,27 @@
 
 .registerButton,
 .participateButton {
-  border: none;
-  border-radius: 5px;
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-medium);
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+
+  font-size: 0.8rem;
+  font-weight: 500;
+
+  border: 1px solid rgba(125, 211, 252, 0.2);
+
+  background: rgba(56, 189, 248, 0.08);
+  color: #ffffff;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.registerButtonActive:hover,
+.participateButtonActive:hover {
+  background: rgba(56, 189, 248, 0.15);
+
+  box-shadow:
+    0 0 10px rgba(56, 189, 248, 0.25);
 }
 
 .registerButton {
@@ -119,36 +166,39 @@
 }
 
 .nonactive {
-  background-color: transparent;
-  border: 1px var(--color-black-2) solid;
-  color: var(--color-black-2);
+  background: transparent;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  color: rgba(148, 163, 184, 0.5);
   cursor: not-allowed;
 }
 
 .footer {
+  margin-top: auto;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--color-black-4);
-  width: calc(100% + 53px);
-  height: 32px;
-  margin-left: -38px;
-  margin-right: -15px;
-  margin-top: auto;
-  padding: 0 15px 0 10px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+
+  padding-top: 0.75rem;
+
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
 }
 
 .participants {
   display: flex;
   gap: 6px;
-  color: var(--color-grey-1);
-  font-size: var(--font-size-xs);
+
+  font-size: 0.8rem;
+  color: rgba(148, 163, 184, 0.7);
 }
 
 .resultsLink {
-  color: var(--color-purple);
+  font-size: 0.8rem;
+  color: #7dd3fc;
 
-  font-size: var(--font-size-xs);
+  text-decoration: none;
+}
+
+.resultsLink:hover {
+  text-decoration: underline;
 }

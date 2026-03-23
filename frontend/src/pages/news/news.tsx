@@ -221,7 +221,9 @@ export default function News() {
                 <p className={styles.modalText}>{selectedNews.data.text}</p>
               </>
             ) : (
-              <p>Выберите новость 👈</p>
+             <div className={styles.modalImage}>
+                <img src="/src/jpg/blank.png" alt="" />
+              </div>
             )}
           </div>
 
